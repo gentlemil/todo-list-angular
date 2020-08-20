@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-list-angular';
+
+  getFooter() {
+    return '2019 © Lista zadań zbudowana w Angularze.';
+  }
 }
