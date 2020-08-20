@@ -6,9 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-list-angular';
+  // title = 'my daily todo list';
 
-  getFooter() {
-    return '2019 © Lista zadań zbudowana w Angularze.';
-  }
+  config: {[key: string]: string | Date} = null;
+
+  constructor() {
+    setTimeout(() => {
+      this.config = {
+        title: 'my daily todo list',
+        footer: ' © All Rights Reserved by Gentlemil. ',
+        date: new Date(),
+      };
+    }, 500);
+  };
+
+  // getFooter() {
+  //   // return ' © All Rights Reserved by Gentlemil. ';
+  // }
+
+  // getDate(): Date {
+  //   return new Date();
+  // }
 }
