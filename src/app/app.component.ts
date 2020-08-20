@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from './task';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'my daily todo list';
-
+  
+  tasks: Task [] = [
+    {
+      name: 'Siłownia',
+      deadline: '2020-01-02',
+      done: false
+    },
+    {
+      name: 'Nauka Angulara',
+      deadline: '2020-01-03',
+      done: false
+    },
+    {
+      name: 'Sprzątanie kuwety',
+      deadline: '2020-01-04',
+      done: false
+    },
+  ];
   config: {[key: string]: string | Date} = null;
 
   constructor() {
